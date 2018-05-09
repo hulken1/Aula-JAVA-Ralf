@@ -36,15 +36,15 @@ public class Ex01 {
 	
 	public void cargo(){
 		
-		String cargos = " Informe seu cargo\n";
+		String cargos = "Informe seu cargo\n";
 			   cargos+= "1) Gerente\n";
-			   cargos+= "1) Atendente\n";
-			   cargos+= "1) Acougueiro\n";
-			   cargos+= "1) Secretaria\n";
-			   cargos+= "1) Almoxarife\n";
-			   cargos+= "1) Padeiro\n";
-			   cargos+= "1) Estagiario\n";
-			 op = Integer.parseInt(JOptionPane.showInputDialog(cargo));   
+			   cargos+= "2) Atendente\n";
+			   cargos+= "3) Acougueiro\n";
+			   cargos+= "4) Secretaria\n";
+			   cargos+= "5) Almoxarife\n";
+			   cargos+= "6) Padeiro\n";
+			   cargos+= "7) Estagiario\n";
+			 op = Integer.parseInt(JOptionPane.showInputDialog(cargos));   
 			   
 			 switch (op) {
 			case 1:
@@ -74,22 +74,36 @@ public class Ex01 {
 					   
 		
 	}
+	public void laco(){
+		int continuar=0;
+		
+		do{
+			nomesIdade();
+			sexo();
+			cargo();
+			continuar = JOptionPane.showConfirmDialog(null,"Deseja continuar?","",0);
+		}while(continuar == 0);
+		exibir();
+	
+	}
 	
 	public void exibir(){
 		
-		String msg = "Informacoes\n\n";
-			   msg+= "\nQuantidade Masculino "+qtdMasc;
-			   msg+= "\nQuantidade Feminino "+qtdFem;  
-			   msg+= "\n\n Cargos \n\n";
-			   msg+= "\nGerente "+c1;
+		String msg = "Informacoes\n";
+			   msg+= "Masculino "+qtdMasc;
+			   msg+= "\nFeminino "+qtdFem;  
+			   msg+= "\nMaior de idade "+adult;
+			   msg+= "\nMenor de idade "+adult;
+			   msg+= "\n**** Cargos ****\n";
+			   msg+= "Gerente "+c1;
 			   msg+= "\nAtendente "+c2;
 			   msg+= "\nAçougueiro "+c3;
-			   msg+= "\nGerente "+c4;
-			   msg+= "\nGerente "+c5;
-			   msg+= "\nGerente "+c6;
-			   msg+= "\nGerente "+c7;
+			   msg+= "\nSecretaria "+c4;
+			   msg+= "\nAlmoxarife "+c5;
+			   msg+= "\nPadeiro "+c6;
+			   msg+= "\nEstagiario "+c7;
 			   
-		
+		JOptionPane.showMessageDialog(null,msg);
 		
 	}
 }
