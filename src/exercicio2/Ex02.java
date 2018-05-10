@@ -7,9 +7,7 @@ public class Ex02 {
 	String nome, nomemaioraltura="",nomemaioridade="",nomemaiorpeso="";
 	int idade,qtdJogadores=0 ;
 	double peso,altura,maiorPeso,maiorAltura,maiorIdade,somaAltura=0;
-	
-	
-	
+
 	public void perguntas(){
 		 
 		nome = JOptionPane.showInputDialog("Informe nome do jogador");
@@ -27,36 +25,29 @@ public class Ex02 {
 		do{
 			perguntas();
 			resultados();
-			mediaAltura();
-			
-			continuar = JOptionPane.showConfirmDialog(null,"Deseja continuar a cadastrar ? ","", 0);
-			
+			mediaAltura();			
+			continuar = JOptionPane.showConfirmDialog(null,"Deseja continuar a cadastrar ? ","", 0);			
 		}while(continuar == 0);
 		exibir();
 		
 	}
 	
 	public void resultados(){
-		
 				
 		if(idade > maiorIdade){
 			maiorIdade = idade;
 			nomemaioridade = nome;
-		}
-		
+		}		
 		if(peso > maiorPeso){
 			maiorPeso = peso;
 			nomemaiorpeso = nome;
-		}
-		
-		
+		}	
 		somaAltura += altura;
 		if(altura > maiorAltura){
 			maiorAltura = altura;
 			nomemaioraltura = nome;
 		}
 	}
-
 	public double mediaAltura(){
 		
 		double media = somaAltura / qtdJogadores;
