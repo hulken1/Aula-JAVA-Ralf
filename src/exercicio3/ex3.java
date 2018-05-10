@@ -8,6 +8,7 @@ public class ex3 {
 	
 public void perguntarPedido(){
 	
+	//Cardapio
 	String pedido = " Selecione seu pedido \n\n";
 		   pedido+= "1)Pao com Banha  R$ 1,50";
 		   pedido+= "\n2)Peixe Cru com ketchup  R$ 6,00";
@@ -23,7 +24,7 @@ public void perguntarPedido(){
 
 public void laco(){
 	int continuar;
-		
+		//Laco
 	do{
 		perguntarPedido();
 		qtdPedidos();
